@@ -17,15 +17,11 @@ function App() {
           <Header />
           <main className="flex-1 pt-16">
             <Routes>
+              {/* Public Routes */}
+              <Route path="/" element={<LandingPage />} />
               <Route path="/login" element={<LoginPage />} />
-              <Route
-                path="/"
-                element={
-                  <AuthGuard>
-                    <LandingPage />
-                  </AuthGuard>
-                }
-              />
+
+              {/* Protected Routes */}
               <Route
                 path="/battle"
                 element={
